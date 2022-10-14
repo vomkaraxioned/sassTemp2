@@ -1,0 +1,42 @@
+@mixin header {
+  .header {
+    @include boxModel(100%);
+    width: 100%;
+    padding: 35px 0;
+    @include position(absolute, 0);
+
+    .menu {  @include display(none);}
+
+    .nav,
+    .navigation {  @include flex(true);}
+
+    .navigation {  flex: 1;}
+
+    .nav_item {
+       a { 
+        @include font(map.get($colors,"white"),false,16px,false,capitalize);
+
+         a:hover, .active a { @include font(map.get($colors,"blue_shade"));}
+      }
+  
+    }
+    
+    .nav_item:nth-child(2) {  margin: 0 10%;}
+
+    .logo {
+
+      @include boxModel(75%);
+      padding: 0 1%;
+      @include font(map.get($colors,"white_shade"),false,14px);
+    }
+
+    .logo span:nth-last-child(1) { @include font(false,false,false,700,uppercase);}
+
+    .highlight { @include font(map.get($colors,"white"),false,20px,400);}
+
+    .active a {  @include font(map.get($colors,"red"));}
+
+
+  }
+
+}

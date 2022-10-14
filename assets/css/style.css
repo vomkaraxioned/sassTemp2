@@ -1,0 +1,106 @@
+@import "../css/reset.css";
+.wrapper {
+  width: 86%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  width: 100%;
+  padding: 35px 0;
+  position: absolute;
+  top: 0;
+}
+.header .menu {
+  display: none;
+}
+.header .nav,
+.header .navigation {
+  display: flex;
+}
+.header .navigation {
+  flex: 1;
+}
+.header .nav_item a {
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.header .nav_item a a:hover, .header .nav_item a .active a {
+  color: #034c55;
+}
+.header .nav_item:nth-child(2) {
+  margin: 0 10%;
+}
+.header .logo {
+  width: 75%;
+  padding: 0 1%;
+  color: #a2a899;
+  font-size: 14px;
+}
+.header .logo span:nth-last-child(1) {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header .highlight {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+.header .active a {
+  color: #f00;
+}
+
+.banner {
+  padding: 230px 0 35px 0;
+  background: url("../images/slide01.jpg") rgba(0, 0, 0, 0.4) center no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.banner_description {
+  padding-bottom: 30px;
+  color: #a2a899;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.banner_description span {
+  color: #fff;
+}
+.banner_title {
+  width: 23%;
+  padding: 15px 0;
+  border-bottom: solid #fff;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.carousel-controls {
+  padding-top: 170px;
+  display: flex;
+  justify-content: center;
+}
+.carousel-controls .carousel-control {
+  margin: 0 15%;
+}
+
+.control {
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  background-color: #656565;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+  text-indent: -9999px;
+}
+
+.control:hover, .control-active {
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
