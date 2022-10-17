@@ -24,36 +24,23 @@
       @include display(block);
       @include font(map.get($colors,"white"));
   }
-  .menu::before {
-    @include icon('\f0c9');
-  }
+  .menu::before {  @include icon('\f0c9');}
 
-  .menu:hover::before {
-    @include icon('\f00d');
-  }
+  .menu:hover::before {  @include icon('\f00d');}
 
-  .menu:hover .navigation .nav-item {
-    @include display(block);
-  }
+  .menu:hover .navigation .nav-item {  @include display(block);}
 
-  .learn .sub_title, .maximus .description {
-    @include font(false,false,false,false,false,center);
-  }
-  .information .learn .more_title,.maximus .title  {
-      @include boxModel(80%);
-  }
+  .learn .sub_title, .maximus .description {  @include font(false,false,false,false,false,center);}
 
-  .link {
-      margin-right: 5%;
-  }
+  .information .learn .more_title,.maximus .title  {  @include boxModel(80%);}
+
+  .link {  margin-right: 5%;}
 
   .copyright {
        @include boxModel(100%);
        @include font(false,false,false,false,false,center);
   }
-  .gallery_item:nth-child(odd) {
-      margin-right: 2%;
-  }
+  .gallery_item:nth-child(odd) {  margin-right: 2%;}
 }
 
 }

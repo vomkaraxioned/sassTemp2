@@ -3,9 +3,7 @@
     padding: 90px 0 82px 0;
     @include backgroundImage( "../images/bg.jpg", rgba(0, 0, 0, .8),true);
 
-    .wrapper {
-      @include flex(true,false,center,center);
-   }
+    .wrapper {  @include flex(true,false,center,center);}
    
    .description {
        padding-bottom: 15px;

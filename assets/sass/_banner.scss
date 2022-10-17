@@ -20,11 +20,7 @@
     }
   }
 
-  .carousel-controls {
-    padding-top: 170px;
-    @include flex(true,false,center);
-    // .carousel-control {  margin: 0 15%;}  
-  }
+  .carousel-controls {  padding-top: 170px;}
 
   .control {
     padding: 6px;
@@ -35,7 +31,5 @@
   }
 
   .control:hover , .control_active{  background-color:map.get($colors,"white");}
-
-  .learn-more {  @include display}
 
 }

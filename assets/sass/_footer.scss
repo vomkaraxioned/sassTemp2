@@ -2,51 +2,34 @@
   footer {
     padding: 67px 0 61px 0;
     background-color: map.get($colors,"black");
+    
     .links {
       @include boxModel(100%);
       @include flex(true,false,center);
     }
     
-    .link {
-        margin-right: 2%;
-    }
+    .link {  margin-right: 2%;}
     
-    .link:nth-last-child(1) {
-        margin: 0;
-    }
+    .link:nth-last-child(1) {  margin: 0;}
     
-    .link a {
-        text-indent: -9999px;
-    }
+    .link a {  text-indent: -9999px;}
     
-    .link a::before {
-      @include font(map.get($colors,"grey"));
-    }
+    .link a::before {  @include font(map.get($colors,"grey"));}
     
-    .link:nth-child(1) a::before {
-      @include icon('\f099',true);
-    }
+    .link:nth-child(1) a::before {  @include icon('\f099',true);}
     
-    .link:nth-child(2) a::before {
-      @include icon( '\f39e',true);
-    }
+    .link:nth-child(2) a::before {  @include icon( '\f39e',true);}
     
-    .link:nth-child(3) a::before {
-      @include icon( '\f16d',true);
-    }
+    .link:nth-child(3) a::before {  @include icon( '\f16d',true);}
     
-    .link:nth-child(4) a:before {
-      @include icon( '\f0e0',true);
-    }
+    .link:nth-child(4) a:before {  @include icon( '\f0e0',true);}
     
     .copyright {
         padding-top: 40px;
         @include font(map.get($colors,"grey"),false,12px,700);
     }
     
-    .link a:hover::before {
-      @include font(map.get($colors,"white"));
-    }
+    .link a:hover::before {  @include font(map.get($colors,"white"));}
     
 }
 }

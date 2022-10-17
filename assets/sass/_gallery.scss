@@ -10,13 +10,9 @@
       @include font(map.get($colors, "blackShade"), false, 27px, false, false, center);
     }
     
-    .description {
-      @include font(map.get($colors,"blackShade"),false,16px,500,uppercase);
-    }
+    .description {  @include font(map.get($colors,"blackShade"),false,16px,500,uppercase);}
 
-    .items {
-      @include flex(true, false, center, false, false, wrap);
-    }
+    .items {  @include flex(true, false, center, false, false, wrap);}
 
     .item {
       @include boxModel(43%);
@@ -26,12 +22,8 @@
       background-color: map.get($colors, "white");
     }
 
-    .item:nth-child(odd) {
-      margin-right: 4%;
-    }
+    .item:nth-child(odd) {  margin-right: 4%;}
 
-    .item figure {
-      @include boxModel(100%);
-    }
+    .item figure {  @include boxModel(100%);}
   }
 }
