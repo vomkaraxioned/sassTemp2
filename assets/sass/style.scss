@@ -2,7 +2,7 @@
 @import "globals/reset";
 @import "globals/mixin";
 @import "globals/variables";
-@import "header","banner";
+@import "header","banner","information","maximus","gallery","footer","996px","768px","540px","425px";
 
 .wrapper {
     max-width: 1360px;
@@ -13,3 +13,11 @@
 
 @include header;
 @include banner;
+@include information;
+@include maximus;
+@include gallery;
+@include footer;
+@include smallScreen;
+@include tablet;
+@include largeMobiles;
+@include mediumMobiles;

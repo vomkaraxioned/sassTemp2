@@ -31,8 +31,7 @@
     }
 
     .highlight { @include font(map.get($colors,"white"),false,20px,400);}
-
-
   }
 
+    
 }

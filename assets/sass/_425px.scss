@@ -1,0 +1,13 @@
+@mixin mediumMobiles {
+  @media only screen and (max-width: 425px) {
+    .information {
+        padding: 20px 0;
+    }
+    .information .learn,.gallery .item {
+       @include boxModel(95%);
+    }
+    .gallery .title,.maximus .title {
+      @include boxModel(100%);
+    }
+}
+}

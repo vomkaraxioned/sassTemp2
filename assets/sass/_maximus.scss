@@ -1,0 +1,23 @@
+@mixin maximus {
+  .maximus {
+    padding: 90px 0 82px 0;
+    @include backgroundImage( "../images/bg.jpg", rgba(0, 0, 0, .8),true);
+
+    .wrapper {
+      @include flex(true,false,center,center);
+   }
+   
+   .description {
+       padding-bottom: 15px;
+       @include font(map.get($colors,"white"),false,12px,false,uppercase);
+       letter-spacing: .2em;
+   }
+   
+   .title {
+     @include boxModel(49%);
+       padding: 10px 0;
+       border-top: 1px solid #fff;
+       @include font(map.get($colors,"white"),false,28px,false,false,center);
+   }  
+}
+}
