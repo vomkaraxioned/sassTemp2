@@ -4,7 +4,12 @@
 @import "globals/variables";
 @import "header","banner";
 
-@include wrapper(false,86%);
-.wrapper { @include flex();}
+.wrapper {
+    max-width: 1360px;
+    @include boxModel(85%);
+    margin: $autoMargin;
+    @include flex(true,false,center,center,column);
+}
+
 @include header;
 @include banner;

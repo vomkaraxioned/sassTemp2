@@ -7,7 +7,7 @@
 
     .menu {  @include display(none);}
 
-    .nav,
+    .navbar,
     .navigation {  @include flex(true);}
 
     .navigation {  flex: 1;}
@@ -15,26 +15,22 @@
     .nav_item {
        a { 
         @include font(map.get($colors,"white"),false,16px,false,capitalize);
-
-         a:hover, .active a { @include font(map.get($colors,"blue_shade"));}
       }
-  
+      a:hover{ @include font(map.get($colors,"blueShade"));}
     }
-    
+    .active a { @include font(map.get($colors,"blueShade"));}
     .nav_item:nth-child(2) {  margin: 0 10%;}
 
     .logo {
 
       @include boxModel(75%);
       padding: 0 1%;
-      @include font(map.get($colors,"white_shade"),false,14px);
+      @include font(map.get($colors,"whiteShade"),false,14px);
+
+      span:nth-last-child(1) { @include font(false,false,false,700,uppercase);}
     }
 
-    .logo span:nth-last-child(1) { @include font(false,false,false,700,uppercase);}
-
     .highlight { @include font(map.get($colors,"white"),false,20px,400);}
-
-    .active a {  @include font(map.get($colors,"red"));}
 
 
   }

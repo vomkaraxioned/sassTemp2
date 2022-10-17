@@ -1,7 +1,12 @@
 @import "../css/reset.css";
 .wrapper {
-  width: 86%;
+  max-width: 1360px;
+  width: 85%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {
@@ -14,7 +19,7 @@
 .header .menu {
   display: none;
 }
-.header .nav,
+.header .navbar,
 .header .navigation {
   display: flex;
 }
@@ -26,7 +31,10 @@
   font-size: 16px;
   text-transform: capitalize;
 }
-.header .nav_item a a:hover, .header .nav_item a .active a {
+.header .nav_item a:hover {
+  color: #034c55;
+}
+.header .active a {
   color: #034c55;
 }
 .header .nav_item:nth-child(2) {
@@ -46,9 +54,6 @@
   color: #fff;
   font-size: 20px;
   font-weight: 400;
-}
-.header .active a {
-  color: #f00;
 }
 
 .banner {
@@ -71,7 +76,7 @@
 .banner_title {
   width: 23%;
   padding: 15px 0;
-  border-bottom: solid #fff;
+  border-top: 1px #fff;
   color: #fff;
   font-size: 100px;
   font-weight: 400;
@@ -83,23 +88,19 @@
   display: flex;
   justify-content: center;
 }
-.carousel-controls .carousel-control {
-  margin: 0 15%;
-}
 
 .control {
   padding: 6px;
   border: none;
   border-radius: 50%;
-  background-color: #656565;
+  background-color: #454545;
   color: #fff;
-  font-size: 100px;
-  font-weight: 400;
+  font-size: 0;
   text-align: center;
   text-indent: -9999px;
 }
 
-.control:hover, .control-active {
+.control:hover, .control_active {
   background-color: #fff;
 }
 
