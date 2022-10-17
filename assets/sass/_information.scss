@@ -14,7 +14,7 @@
 
             .sub_title {
                 padding: 49px 0 15px 0;
-                @include font(map.get($colors,"white"),false,10px,700,uppercase);
+                @include font(map.get($colors,"whiteShade"),false,10px,700,uppercase);
                 letter-spacing: .4em;
                 word-spacing: .2em;
             }
@@ -32,7 +32,7 @@
         .learn_description {
             @include boxModel(83%);
             padding-bottom: 34px;
-            @include font(map.get($colors,"blackShade"));
+            @include font(map.get($colors,"whiteShade"));
         }
         
         .btn_learn {

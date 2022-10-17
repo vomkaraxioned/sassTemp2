@@ -125,7 +125,7 @@
 }
 .information .learn .sub_title {
   padding: 49px 0 15px 0;
-  color: #fff;
+  color: #a2a899;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
@@ -146,7 +146,7 @@
 .information .learn_description {
   width: 83%;
   padding-bottom: 34px;
-  color: #454545;
+  color: #a2a899;
 }
 .information .btn_learn {
   padding: 12px 3%;
@@ -199,6 +199,12 @@
   color: #454545;
   font-size: 27px;
   text-align: center;
+}
+.gallery .description {
+  color: #454545;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .gallery .items {
   display: flex;

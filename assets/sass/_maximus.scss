@@ -10,7 +10,7 @@
    .description {
        padding-bottom: 15px;
        @include font(map.get($colors,"white"),false,12px,false,uppercase);
-       letter-spacing: .2em;
+       letter-spacing: .2em;  
    }
    
    .title {
