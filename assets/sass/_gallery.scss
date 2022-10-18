@@ -34,26 +34,38 @@
       }
     }
 
+
+    @include responsive(map.get($devices, "ipad")) {
+      &__item {
+        :nth-child(odd) {
+          margin-right: 2%;
+        }
+      }
+    }
+
+    @include responsive(map.get($devices, "largePhone")) {
+      &__items {
+        @include flex(false, false, false, center, column);
+
+        :nth-child(odd) {
+          margin-right: 0;
+        }
+      }
+
+    }
+
+
+    @include responsive(map.get($devices, "mediumPhone")) {
+      &__item {
+        @include boxModel(95%);
+
+        &__title {
+          @include boxModel(100%);
+        }
+      }
+
+    }
+
   }
-}
-
-
-@include responsive(map.get($devices, "ipad")) {
-  .gallery__item{
-    :nth-child(odd) {  margin-right: 2%;}
-  }
-}
-
-@include responsive(map.get($devices, "largePhone")) {
-  .gallery_items {  @include flex(false,false,false,center,column);}
-  .gallery .item:nth-child(odd) {  margin-right: 0;}
-
-}
-
-
-@include responsive(map.get($devices, "mediumPhone")) {
-  .maximus {
-    &__title {  @include boxModel(100%);}
-  } 
 
 }

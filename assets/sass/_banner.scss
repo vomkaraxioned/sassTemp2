@@ -22,6 +22,14 @@
     }
 
     &__carousel-controls {  padding-top: 170px;}
+
+    @include responsive(map.get($devices,"tablet")) {
+      &__title {  @include boxModel(50%);}
+    }
+    
+    @include responsive(map.get($devices,"largePhone")) {
+      &__title {  @include boxModel(85%);}
+    }
   }
 
 
@@ -39,12 +47,4 @@
     background-color: map.get($colors, "white");
   }
 
-}
-
-@include responsive(map.get($devices,"tablet")) {
-  .banner__title {  @include boxModel(50%);}
-}
-
-@include responsive(map.get($devices,"largePhone")) {
-  .banner__title {  @include boxModel(85%);}
 }

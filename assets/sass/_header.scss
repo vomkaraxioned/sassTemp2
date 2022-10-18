@@ -40,7 +40,52 @@
         @include font(false, false, false, 700, uppercase);
       }
     }
+
+    @include responsive(map.get($devices, "ipad")) {
+      .navigation {
+        @include boxModel(100%);
+        @include position(absolute, 80px, false, false, 0);
+        @include flex(false, false, center, center, column);
+      }
+    
+
+        &__nav-item {
+          @include boxModel(100%);
+          @include display(none);
+          background-color: map.get($colors, "black");
+          opacity: .6;
+          @include font(false, false, false, false, false, center);
+      
+          &:nth-child(2) {
+            border: 1px solid #fff;
+            border-left: transparent;
+            border-right: transparent;
+            margin: 0;
+          }
+        }
+    
+      .menu {
+        padding-left: 7%;
+        @include display(block);
+        @include font(map.get($colors, "white"));
+        text-indent: -9999px;
+    
+        &::before {
+          @include icon('\f0c9',true);
+        }
+    
+        &:hover::before {
+          @include icon('\f00d',true);
+        }
+        
+        &:hover .navigation .nav-item {
+          @include display(block);
+        }
+      }
+    }
+    
   }
+  
 }
 
 .menu {
@@ -53,47 +98,4 @@
 
 .navbar {
   @include flex(true);
-}
-
-@include responsive(map.get($devices, "ipad")) {
-  .navigation {
-    @include boxModel(100%);
-    @include position(absolute, 80px, false, false, 0);
-    @include flex(false, false, center, center, column);
-  }
-
-  .header {
-    &__nav-item {
-      @include boxModel(100%);
-      @include display(none);
-      background-color: map.get($colors, "black");
-      opacity: .6;
-      @include font(false, false, false, false, false, center);
-  
-      :nth-child(2) {
-        border: 1px solid #fff;
-        border-left: transparent;
-        border-right: transparent;
-        margin: 0;
-      }
-    }
-  }
-
-  .menu {
-    padding-left: 7%;
-    @include display(block);
-    @include font(map.get($colors, "white"));
-
-    ::before {
-      @include icon('\f0c9');
-    }
-
-    :hover::before {
-      @include icon('\f00d');
-    }
-    
-    :hover .navigation .nav-item {
-      @include display(block);
-    }
-  }
 }

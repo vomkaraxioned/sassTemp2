@@ -16,7 +16,7 @@
             figure {
                 @include boxModel(100%);
             }
-            
+
         }
 
         &__sub-title {
@@ -42,6 +42,7 @@
         &__learn:nth-child(1) {
             margin-right: 5%;
         }
+
         .btn-learn {
             padding: 12px 3%;
             border: 1px solid #cdcdcd;
@@ -53,36 +54,39 @@
             }
         }
 
-    }
-}
+        @include responsive(map.get($devices, "ipad")) {
+            &__sub-title {
+                @include font(false, false, false, false, false, center);
+            }
 
-@include responsive(map.get($devices,"ipad")) {
-    .information {
-        &__sub-title {  @include font(false,false,false,false,false,center);}
-    }
+            &__more-title {
+                @include boxModel(80%);
+            }
+        }
 
-  .information {
-    &__.more-title {  @include boxModel(80%);}
-  }
-}
-  @include responsive(map.get($devices,"largePhone")) {
-    .information {
-        &__learn-more {  @include flex(false,false,false,center,column);}
-    }
+        @include responsive(map.get($devices, "largePhone")) {
+            &__learn-more {
+                @include flex(false, false, false, center, column);
+            }
 
-    .information {
-        &__learn{  
-            @include boxModel(80%);
-            :nth-child(1) {  margin: 25px 0;}
+            &__learn {
+                @include boxModel(80%);
+
+                :nth-child(1) {
+                    margin: 25px 0;
+                }
+
+            }
+        }
+
+        @include responsive(map.get($devices, "mediumPhone")) {
+            padding: 20px 0;
+
+            &__learn {
+                @include boxModel(95%);
+            }
+
         }
 
     }
-}
-
-@include responsive(map.get($devices,"mediumPhone")) { 
-    .information {  
-        padding: 20px 0;
-        &__learn{ @include boxModel(95%);}
-    }
-
 }

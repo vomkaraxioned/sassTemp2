@@ -1,35 +1,60 @@
-@mixin footer{
-  footer {
+@mixin footer {
+  .footer {
     padding: 67px 0 61px 0;
-    background-color: map.get($colors,"black");
-    
-    .links {
+    background-color: map.get($colors, "black");
+
+    &__links {
       @include boxModel(100%);
-      @include flex(true,false,center);
+      @include flex(true, false, center);
     }
-    
-    .link {  margin-right: 2%;}
-    
-    .link:nth-last-child(1) {  margin: 0;}
-    
-    .link a {  text-indent: -9999px;}
-    
-    .link a::before {  @include font(map.get($colors,"grey"));}
-    
-    .link:nth-child(1) a::before {  @include icon('\f099',true);}
-    
-    .link:nth-child(2) a::before {  @include icon( '\f39e',true);}
-    
-    .link:nth-child(3) a::before {  @include icon( '\f16d',true);}
-    
-    .link:nth-child(4) a:before {  @include icon( '\f0e0',true);}
-    
+
+    &__link {
+      margin-right: 2%;
+
+      :nth-last-child(1) {
+        margin: 0;
+      }
+
+      a {
+        text-indent: -9999px;
+
+        &:hover::before {
+          @include font(map.get($colors, "white"));
+        }
+
+        &::before {
+          @include font(map.get($colors, "grey"));
+        }
+      }
+    }
+
+    :nth-child(1) a::before {
+      @include icon('\f099', true);
+    }
+
+    :nth-child(2) a::before {
+      @include icon('\f39e', true);
+    }
+
+    :nth-child(3) a::before {
+      @include icon('\f16d', true);
+    }
+
+    :nth-child(4) a:before {
+      @include icon('\f0e0', true);
+    }
+
     .copyright {
-        padding-top: 40px;
-        @include font(map.get($colors,"grey"),false,12px,700);
+      padding-top: 40px;
+      @include font(map.get($colors, "grey"), false, 12px, 700);
     }
-    
-    .link a:hover::before {  @include font(map.get($colors,"white"));}
-    
+
+  }
 }
+
+@include responsive(map.get($devices, "ipad")) {
+  .copyright {
+    @include boxModel(100%);
+    @include font(false, false, false, false, false, center);
+  }
 }

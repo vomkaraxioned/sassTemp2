@@ -19,34 +19,30 @@
       border-top: 1px solid #fff;
       @include font(map.get($colors, "white"), false, 28px, false, false, center);
     }
-  }
-}
 
-@include responsive(map.get($devices, "ipad")) {
-  .maximus {
-    &__description {
-      @include font(false, false, false, false, false, center);
+    @include responsive(map.get($devices, "ipad")) {
+      &__description {
+        @include font(false, false, false, false, false, center);
+      }
+
+      &__title {
+        @include boxModel(80%);
+      }
     }
 
-    &__title {
-      @include boxModel(80%);
+    @include responsive(map.get($devices, "largePhone")) {
+      &__title {
+        @include boxModel(90%);
+      }
+
+    }
+
+
+    @include responsive(map.get($devices, "mediumPhone")) {
+      &__title {
+        @include boxModel(100%);
+      }
+
     }
   }
-}
-
-@include responsive(map.get($devices, "largePhone")) {
-  .maximus {
-    &__title {
-      @include boxModel(90%);
-    }
-  }
-
-}
-
-
-@include responsive(map.get($devices, "mediumPhone")) {
-  .maximus {
-    &__title {  @include boxModel(100%);}
-  } 
-
 }
