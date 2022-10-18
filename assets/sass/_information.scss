@@ -3,48 +3,86 @@
         padding: 89px 0 93px 0;
         background-color: map.get($colors, "white");
 
-        .learn-more {    @include flex(true);}
+        &__learn-more {
+            @include flex(true);
+        }
 
-        .learn {
+        &__learn {
             @include boxModel(47%);
             padding-bottom: 41px;
             background-color: #fff;
             @include flex(true, false, center, center, column);
 
-            figure {    @include boxModel(100%);}
-
-            .sub-title {
-                padding: 49px 0 15px 0;
-                @include font(map.get($colors, "whiteShade"), false, 10px, 700, uppercase);
-                letter-spacing: .4em;
-                word-spacing: .2em;
+            figure {
+                @include boxModel(100%);
             }
-
-            .more-title {
-                @include boxModel(46%);
-                padding: 5px 0 33px 0;
-                border-top: 1px solid #cdcdcd;
-                @include font(map.get($colors, "blackShade"), false, 28px, false, false, center);
-            }
+            
         }
 
-        .learn:nth-child(1) {    margin-right: 5%;}
+        &__sub-title {
+            padding: 49px 0 15px 0;
+            @include font(map.get($colors, "whiteShade"), false, 10px, 700, uppercase);
+            letter-spacing: .4em;
+            word-spacing: .2em;
+        }
 
-        .learn-description {
+        &__more-title {
+            @include boxModel(46%);
+            padding: 5px 0 33px 0;
+            border-top: 1px solid #cdcdcd;
+            @include font(map.get($colors, "blackShade"), false, 28px, false, false, center);
+        }
+
+        &__learn-description {
             @include boxModel(83%);
             padding-bottom: 34px;
             @include font(map.get($colors, "whiteShade"));
         }
 
+        &__learn:nth-child(1) {
+            margin-right: 5%;
+        }
         .btn-learn {
             padding: 12px 3%;
             border: 1px solid #cdcdcd;
             @include font(map.get($colors, "blackShade"), false, 14px, 400, uppercase);
+
+            &:hover {
+                background-color: map.get($colors, "blackShade");
+                @include font(map.get($colors, "white"));
+            }
         }
 
-        .btn-learn:hover {
-            background-color: map.get($colors, "blackShade");
-            @include font(map.get($colors, "white"));
-        }
     }
+}
+
+@include responsive(map.get($devices,"ipad")) {
+    .information {
+        &__sub-title {  @include font(false,false,false,false,false,center);}
+    }
+
+  .information {
+    &__.more-title {  @include boxModel(80%);}
+  }
+}
+  @include responsive(map.get($devices,"largePhone")) {
+    .information {
+        &__learn-more {  @include flex(false,false,false,center,column);}
+    }
+
+    .information {
+        &__learn{  
+            @include boxModel(80%);
+            :nth-child(1) {  margin: 25px 0;}
+        }
+
+    }
+}
+
+@include responsive(map.get($devices,"mediumPhone")) { 
+    .information {  
+        padding: 20px 0;
+        &__learn{ @include boxModel(95%);}
+    }
+
 }

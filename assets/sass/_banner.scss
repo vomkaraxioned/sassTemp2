@@ -4,25 +4,26 @@
 
     @include backgroundImage("../images/slide01.jpg", rgba(0, 0, 0, .4), true);
 
-    &_description {
+    &__description {
       padding-bottom: 30px;
       @include font(map.get($colors, "whiteShade"), false, 16px, false, uppercase, center);
       letter-spacing: 1px;
+
+      span {
+        @include font(map.get($colors, "white"));
+      }  
     }
 
-    &_description span {
-      @include font(map.get($colors, "white"));
-    }
-
-    &_title {
+    &__title {
       @include boxModel(23%);
       padding: 15px 0;
       border-top: 1px map.get($colors, "white");
       @include font(map.get($colors, "white"), false, 100px, 400, false, center);
     }
+
+    &__carousel-controls {  padding-top: 170px;}
   }
 
-  .carousel-controls {  padding-top: 170px;}
 
   .control {
     padding: 6px;
@@ -30,11 +31,20 @@
     background-color: map.get($colors, "blackShade");
     @include font(map.get($colors, "white"), false, 0, false, false, center);
     text-indent: -9999px;
+
+    :hover {  background-color: map.get($colors, "white");}
   }
 
-  .control:hover,
-  .control_active {
+  .control-active {
     background-color: map.get($colors, "white");
   }
 
+}
+
+@include responsive(map.get($devices,"tablet")) {
+  .banner__title {  @include boxModel(50%);}
+}
+
+@include responsive(map.get($devices,"largePhone")) {
+  .banner__title {  @include boxModel(85%);}
 }

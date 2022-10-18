@@ -3,27 +3,57 @@
     padding: 91px 0 93px 0;
     background-color: map.get($colors, "white");
 
-    .title {
+    &__title {
       @include boxModel(50%);
       padding: 14px 0 42px 0;
       border-top: 1px solid #cdcdcd;
       @include font(map.get($colors, "blackShade"), false, 27px, false, false, center);
     }
-    
-    .description {  @include font(map.get($colors,"blackShade"),false,16px,500,uppercase);}
 
-    .items {  @include flex(true, false, center, false, false, wrap);}
+    &__description {
+      @include font(map.get($colors, "blackShade"), false, 16px, 500, uppercase);
+    }
 
-    .item {
+    &__items {
+      @include flex(true, false, center, false, false, wrap);
+    }
+
+    &__item {
       @include boxModel(43%);
       padding: 14px;
       margin: 30px 0;
       @include flex(true, false, center, center);
       background-color: map.get($colors, "white");
+
+      :nth-child(odd) {
+        margin-right: 4%;
+      }
+
+      figure {
+        @include boxModel(100%);
+      }
     }
 
-    .item:nth-child(odd) {  margin-right: 4%;}
-
-    .item figure {  @include boxModel(100%);}
   }
+}
+
+
+@include responsive(map.get($devices, "ipad")) {
+  .gallery__item{
+    :nth-child(odd) {  margin-right: 2%;}
+  }
+}
+
+@include responsive(map.get($devices, "largePhone")) {
+  .gallery_items {  @include flex(false,false,false,center,column);}
+  .gallery .item:nth-child(odd) {  margin-right: 0;}
+
+}
+
+
+@include responsive(map.get($devices, "mediumPhone")) {
+  .maximus {
+    &__title {  @include boxModel(100%);}
+  } 
+
 }

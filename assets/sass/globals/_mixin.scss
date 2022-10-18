@@ -46,7 +46,7 @@
 
   @if $isVCenter {
     -webkit-box-align: $isVCenter;
-    -moz-box-align: $isVCenterr;
+    -moz-box-align: $isVCenter;
     -ms-flex-align: $isVCenter;
     -webkit-align-items: $isVCenter;
     align-items: $isVCenter;
@@ -61,10 +61,10 @@
   }
 
   @if $isWrap {
-    -webkit-flex-wrap: $isWrap$isWrap$isWrap$isWrap$isWrap;
-    -moz-flex-wrap: $isWrap$isWrap$isWrap$isWrapp;
-    -ms-flex-wrap: $isWrap$isWrap$isWrap;
-    -o-flex-wrap: $isWrap$isWrap;
+    -webkit-flex-wrap: $isWrap;
+    -moz-flex-wrap: $isWrap;
+    -ms-flex-wrap: $isWrap;
+    -o-flex-wrap: $isWrap;
     flex-wrap: $isWrap;
   }
 
@@ -194,7 +194,7 @@
 }
 
 @mixin  breakpoint($min,$max) {
-  @media screen and (min-device-width: $min) and (max-device-width: $max) { 
+  @media screen and (min-device-width: $min+"px") and (max-device-width: $max+"px") { 
     @content;
 }
 }
@@ -212,7 +212,7 @@
 }
 
 @mixin hover($bgcolor,$color) {
-  :hover {
+  &:hover {
     background-color: $bgcolor;
     color: $color;
   }
