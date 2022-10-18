@@ -12,7 +12,7 @@
    }
    
    .title {
-     @include boxModel(49%);
+      @include boxModel(49%);
        padding: 10px 0;
        border-top: 1px solid #fff;
        @include font(map.get($colors,"white"),false,28px,false,false,center);

@@ -2,13 +2,13 @@
 @import "globals/reset";
 @import "globals/mixin";
 @import "globals/variables";
-@import "header","banner","information","maximus","gallery","footer","996px","768px","540px","425px";
+@import "header", "banner", "information", "maximus", "gallery", "footer", "996px", "768px", "540px", "425px";
 
 .wrapper {
     max-width: 1360px;
     @include boxModel(85%);
     margin: $autoMargin;
-    @include flex(true,false,center,center,column);
+    @include flex(true, false, center, center, column);
 }
 
 @include header;

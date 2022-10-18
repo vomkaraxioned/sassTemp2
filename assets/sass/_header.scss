@@ -1,38 +1,54 @@
 @mixin header {
+
   .header {
     @include boxModel(100%);
     width: 100%;
     padding: 35px 0;
     @include position(absolute, 0);
 
-    .menu {  @include display(none);}
-
-    .navbar,
-    .navigation {  @include flex(true);}
-
-    .navigation {  flex: 1;}
-
-    .nav_item {
-       a {   @include font(map.get($colors,"white"),false,16px,false,capitalize);}
-
-      a:hover{ @include font(map.get($colors,"blueShade"));}
+    .menu {
+      @include display(none);
     }
 
-    .active a { @include font(map.get($colors,"blueShade"));}
-    
-    .nav_item:nth-child(2) {  margin: 0 10%;}
+    .navbar {
+      @include flex(true);
+    }
+
+    &__navigation {
+      @include flex(true);
+      flex: 1;
+    }
+
+    &__nav-item {
+      a {
+        @include font(map.get($colors, "white"), false, 16px, false, capitalize);
+
+        :hover {
+          @include font(map.get($colors, "blueShade"));
+        }
+      }
+
+      :nth-child(2) {
+        margin: 0 10%;
+      }
+    }
+
+    .active a {
+      @include font(map.get($colors, "blueShade"));
+    }
 
     .logo {
-
       @include boxModel(75%);
       padding: 0 1%;
-      @include font(map.get($colors,"whiteShade"),false,14px);
+      @include font(map.get($colors, "whiteShade"), false, 14px);
 
-      span:nth-last-child(1) { @include font(false,false,false,700,uppercase);}
+      span:nth-last-child(1) {
+        @include font(false, false, false, 700, uppercase);
+      }
     }
 
-    .highlight { @include font(map.get($colors,"white"),false,20px,400);}
+    .highlight {
+      @include font(map.get($colors, "white"), false, 20px, 400);
+    }
   }
-
-    
 }

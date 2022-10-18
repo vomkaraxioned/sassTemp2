@@ -2,21 +2,23 @@
   .banner {
     padding: 230px 0 35px 0;
 
-    @include backgroundImage("../images/slide01.jpg",rgba(0, 0, 0, .4),true);
+    @include backgroundImage("../images/slide01.jpg", rgba(0, 0, 0, .4), true);
 
     &_description {
       padding-bottom: 30px;
-      @include font(map.get($colors,"whiteShade"),false,16px,false,uppercase,center);
+      @include font(map.get($colors, "whiteShade"), false, 16px, false, uppercase, center);
       letter-spacing: 1px;
     }
-  
-    &_description span {   @include font(map.get($colors,"white"));}
-  
+
+    &_description span {
+      @include font(map.get($colors, "white"));
+    }
+
     &_title {
       @include boxModel(23%);
       padding: 15px 0;
-      border-top: 1px map.get($colors,"white");
-      @include font(map.get($colors,"white"),false,100px,400,false,center);
+      border-top: 1px map.get($colors, "white");
+      @include font(map.get($colors, "white"), false, 100px, 400, false, center);
     }
   }
 
@@ -24,12 +26,15 @@
 
   .control {
     padding: 6px;
-    @include border(none,50%);
-    background-color: map.get($colors,"blackShade");
-     @include font(map.get($colors,"white"),false,0,false,false,center);
+    @include border(none, 50%);
+    background-color: map.get($colors, "blackShade");
+    @include font(map.get($colors, "white"), false, 0, false, false, center);
     text-indent: -9999px;
   }
 
-  .control:hover , .control_active{  background-color:map.get($colors,"white");}
+  .control:hover,
+  .control_active {
+    background-color: map.get($colors, "white");
+  }
 
 }

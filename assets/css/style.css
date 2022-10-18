@@ -19,26 +19,26 @@
 .header .menu {
   display: none;
 }
-.header .navbar,
-.header .navigation {
+.header .navbar {
   display: flex;
 }
-.header .navigation {
+.header__navigation {
+  display: flex;
   flex: 1;
 }
-.header .nav_item a {
+.header__nav-item a {
   color: #fff;
   font-size: 16px;
   text-transform: capitalize;
 }
-.header .nav_item a:hover {
+.header__nav-item a :hover {
   color: #034c55;
+}
+.header__nav-item :nth-child(2) {
+  margin: 0 10%;
 }
 .header .active a {
   color: #034c55;
-}
-.header .nav_item:nth-child(2) {
-  margin: 0 10%;
 }
 .header .logo {
   width: 75%;
@@ -85,8 +85,6 @@
 
 .carousel-controls {
   padding-top: 170px;
-  display: flex;
-  justify-content: center;
 }
 
 .control {
@@ -100,7 +98,8 @@
   text-indent: -9999px;
 }
 
-.control:hover, .control_active {
+.control:hover,
+.control_active {
   background-color: #fff;
 }
 
@@ -108,7 +107,7 @@
   padding: 89px 0 93px 0;
   background-color: #fff;
 }
-.information .learn_more {
+.information .learn-more {
   display: flex;
 }
 .information .learn {
@@ -123,7 +122,7 @@
 .information .learn figure {
   width: 100%;
 }
-.information .learn .sub_title {
+.information .learn .sub-title {
   padding: 49px 0 15px 0;
   color: #a2a899;
   font-size: 10px;
@@ -132,7 +131,7 @@
   letter-spacing: 0.4em;
   word-spacing: 0.2em;
 }
-.information .learn .more_title {
+.information .learn .more-title {
   width: 46%;
   padding: 5px 0 33px 0;
   border-top: 1px solid #cdcdcd;
@@ -143,12 +142,12 @@
 .information .learn:nth-child(1) {
   margin-right: 5%;
 }
-.information .learn_description {
+.information .learn-description {
   width: 83%;
   padding-bottom: 34px;
   color: #a2a899;
 }
-.information .btn_learn {
+.information .btn-learn {
   padding: 12px 3%;
   border: 1px solid #cdcdcd;
   color: #454545;
@@ -156,7 +155,7 @@
   font-weight: 400;
   text-transform: uppercase;
 }
-.information .btn_learn:hover {
+.information .btn-learn:hover {
   background-color: #454545;
   color: #fff;
 }
